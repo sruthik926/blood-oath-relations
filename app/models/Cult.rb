@@ -46,4 +46,14 @@ def self.find_by_founding_year(founding_year)
     cult.founding_year == founding_year
   end
 end
+
+  def average_age
+    totalage = 0
+    BloodOath.all.select do |blood_oath|
+      blood_oath.cult == self
+    end
+
+
+  end
+    binding.pry
 end
